@@ -1,6 +1,6 @@
 === Github Plugin Updater ===
-Contributors: codepress, tschutter, davidmosterd
-Tags: github, update, plugin, repository
+Contributors: codepress,davidmosterd,tschutter
+Tags: github,update,plugin,repository
 Requires at least: 3.4
 Tested up to: 3.5
 Stable tag: 1.0
@@ -11,7 +11,7 @@ Update plugins that are hosted on GitHub.
 
 == Description ==
 
-Updates plugins that are hosted on GitHub. This is a beta release, so be careful production environments.
+Updates plugins that are hosted on GitHub. This is a beta release, so be careful in production environments.
 
 Example usage:
 
