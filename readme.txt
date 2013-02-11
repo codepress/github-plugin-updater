@@ -54,6 +54,12 @@ The zipball from GitHub might is not likely packaged similar to the the slug of 
 temporary file, opened by the ZipArchive class and modified to match the plugin slug path before being send to WordPress.
 This seems closest to the process of WordPress updating a plugin. If you know a neater way, let us know.
 
+= Can I integrate this plugin with my own plugin? =
+
+You can, should take little work. However, it may not be wise. We feel that separating the updater from the plugin itself is
+safest. Any bug found in this plugin might affect your plugin and in the worst case your plugin won't be able to update.
+Separating the two will allow us to fix any bugs in this plugin and keep the update process working just fine.
+
 == Changelog ==
 
 = 1.0 =
