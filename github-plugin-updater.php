@@ -53,6 +53,10 @@ class GitHub_Plugin_Updater {
 		);
 		$this->config = (object) array_merge( $defaults, $config );
 
+		// default slug equals the repo name
+		if ( empty( $this->config->slug ) )
+			$this->config->slug = $this->config->repo . '/' . $this->config->repo . '.php';
+
 		add_filter( 'http_request_args', array( $this, 'add_http_args' ), 10, 2 );
 		add_filter( 'pre_set_site_transient_update_plugins', array( $this, 'update_available' ) );
 

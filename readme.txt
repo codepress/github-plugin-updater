@@ -16,18 +16,18 @@ Updates plugins that are hosted on GitHub. This is a beta release, so be careful
 Example usage:
 
 `
-function codepress_plugin_update() {
+function my_github_plugin_updater() {
 
 	if ( ! function_exsists( 'github_plugin_updater_register' ) )
 		return false;
 
 	github_plugin_updater_register( array(
 		'owner'	=> 'codepress',
-		'repo'	=> 'codepress-core',
-		'slug'	=> 'codepress-core/codepress-core.php',
+		'repo'	=> 'github-plugin-updater',
+		'slug'	=> 'github-plugin-updater/github-plugin-updater.php', // defaults to the repo value ('repo/repo.php')
 	) );
 }
-add_action( 'plugins_loaded', 'codepress_plugin_update' );
+add_action( 'plugins_loaded', 'my_github_plugin_updater' );
 `
 
 Currently we are working on the following features:
