@@ -1,0 +1,10 @@
+# OS
+.DS_Stor*
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.d*
+Thumbs.d*
+
+# Project specific
+
