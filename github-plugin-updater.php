@@ -12,6 +12,15 @@ License: GPLv2 or later
 if ( ! class_exists( 'GitHub_Plugin_Updater' ) ) :
 
 /**
+ * Register a new GitHub plugin
+ *
+ * @param array $config
+ */
+function github_plugin_updater_register( $config ) {
+	new GitHub_Plugin_Updater( $config );
+}
+
+/**
  * Update a WordPress plugin via GitHub
  *
  * It's best avoided to call when is_admin() would return false.
@@ -49,7 +58,7 @@ class GitHub_Plugin_Updater {
 
 		if ( isset( $_GET['get-zipball'] ) && $_GET['get-zipball'] == $this->config->slug )
 			add_action( 'admin_init', array( $this, 'get_zipball' ) );
-	}
+    }
 
 	/**
 	 * Call the GitHub API and return a json decoded body.
@@ -186,9 +195,9 @@ class GitHub_Plugin_Updater {
 	/**
 	 * Allows to change any args used on downloading the zipball
 	 *
+	 * @since 1.0
 	 * @param type $args
 	 * @return type
-	 *
 	 */
 	public function add_http_args( $args, $url ) {
 
