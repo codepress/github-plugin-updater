@@ -18,7 +18,7 @@ Example usage:
 `
 function my_github_plugin_updater() {
 
-	if ( ! function_exsists( 'github_plugin_updater_register' ) )
+	if ( ! function_exists( 'github_plugin_updater_register' ) )
 		return false;
 
 	github_plugin_updater_register( array(
