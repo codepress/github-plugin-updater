@@ -1,4 +1,4 @@
-=== Github Plugin Updater ===
+=== GitHub Plugin Updater ===
 Contributors: codepress,davidmosterd,tschutter
 Tags: github,update,plugin,repository
 Requires at least: 3.4
@@ -11,7 +11,7 @@ Update plugins that are hosted on GitHub.
 
 == Description ==
 
-Updates plugins that are hosted on GitHub. This is a beta release, so be careful in production environments.
+Updates plugins that are hosted on GitHub. This is a beta release, so you might not use it production environments.
 
 Example usage:
 
@@ -46,7 +46,7 @@ Currently we are working on the following features:
 
 = I have an idea for a great way to improve this plugin =
 
-Great! We'd love to hear from you.
+Great! We'd love to hear from you. The plugin is hosted on [GitHub](https://github.com/codepress/github-plugin-updater) for issues or pull requests.
 
 = Why not get the zipball directly from GitHub? =
 
