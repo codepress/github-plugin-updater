@@ -233,7 +233,7 @@ class GitHub_Plugin_Updater {
 	 */
 	public function get_zipball() {
 
-		add_filters( 'http_request_args', array( $this, 'add_http_args' ), 10, 2 );
+		add_filter( 'http_request_args', array( $this, 'add_http_args' ), 10, 2 );
 
 		$zipball = download_url( $this->get_api_url( '/repos/:owner/:repo/:archive_format' ) );
 
