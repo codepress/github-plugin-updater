@@ -205,7 +205,7 @@ class GitHub_Plugin_Updater {
 	 */
 	public function add_http_args( $args, $url ) {
 
-		if ( strpos( $url, $this->get_api_url( '/repos/:owner/:repo/:archive_format' ) ) === 0 ) {
+		if ( 0 === strpos( $url, $this->get_api_url( '/repos/:owner/:repo/:archive_format' ) ) ) {
 			foreach( $this->config->http_args as $name => $value ) {
 				$args[ $name ] = $value;
 			}
