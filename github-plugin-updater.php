@@ -119,13 +119,14 @@ class GitHub_Plugin_Updater {
 	 * @since 1.0
 	 */
 	protected function get_remote_info() {
-		$remote = get_site_transient( __CLASS__ . ':remote' );
+		//delete_site_transient( __CLASS__ . ':remote' . $this->config->repo );
+		$remote = get_site_transient( __CLASS__ . ':remote' . $this->config->repo );
 
 		if ( ! $remote ) {
 			$remote = $this->api( '/repos/:owner/:repo/contents/' . basename( $this->config->slug ) );
 
 			if ( $remote )
-				set_site_transient( __CLASS__ . ':remote', $remote, 60 * 60 );
+				set_site_transient( __CLASS__ . ':remote' . $this->config->repo, $remote, 60 * 60 );
 		}
 
 		return $remote;
