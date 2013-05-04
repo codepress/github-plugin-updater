@@ -119,7 +119,6 @@ class GitHub_Plugin_Updater {
 	 * @since 1.0
 	 */
 	protected function get_remote_info() {
-		//delete_site_transient( __CLASS__ . ':remote' . $this->config->repo );
 		$remote = get_site_transient( __CLASS__ . ':remote' . $this->config->repo );
 
 		if ( ! $remote ) {
